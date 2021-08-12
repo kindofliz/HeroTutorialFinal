@@ -3,8 +3,6 @@ public class Hero extends Person {
     //Attributes/Properties
     private int heroID;
     private String heroName;
-    private String heroCity;
-    private String universe;
     private double heroSalary;
     private int deedTime;
 
@@ -15,31 +13,27 @@ public class Hero extends Person {
 
 
     //argument constructor
-    public Hero(String inputName, String inputSurname, int inputHeroId, String inputHeroName, String inputHeroCity, String inputUniverse, double inputHeroSalary, int inputDeedTime) {
-        this.name = inputName;
-        this.surname = inputSurname;
-        this.heroID = inputHeroId;
-        this.heroName = inputHeroName;
-        this.heroCity = inputHeroCity;
-        this.universe = inputUniverse;
-        this.heroSalary = inputHeroSalary;
-        this.deedTime = inputDeedTime;
+    public Hero(String name, String surname, int heroId, String heroName, double heroSalary, int deedTime) {
+        this.name = name;
+        this.surname = surname;
+        this.heroID = heroId;
+        this.heroName = heroName;
+        this.heroSalary = heroSalary;
+        this.deedTime = deedTime;
 
     }
 
     //toString() is the method where information about the object values are returned as String value.
     @Override
     public String toString() {
-        return "Hero{" +
-                "name='" + name + '\'' +
-                ", surname='" + surname + '\'' +
-                ", heroID=" + heroID +
-                ", heroName='" + heroName + '\'' +
-                ", heroCity='" + heroCity + '\'' +
-                ", universe='" + universe + '\'' +
-                ", heroSalary=" + heroSalary +
-                ", deedTime=" + deedTime +
-                '}';
+        return "HERO: " +
+                "Name - '" + name + '\'' +
+                " | Surname - '" + surname + '\'' +
+                " | HeroID - '" + heroID + '\'' +
+                " | HeroName - '" + heroName + '\'' +
+                " | HeroSalary (Eur) - '" + heroSalary + '\'' +
+                " | DeedTime (h/week) - '" + deedTime + '\'' +
+                '|';
     }
 
     //calculatedLevel() is the method where hero level is calculated:
@@ -72,22 +66,6 @@ public class Hero extends Person {
 
     public void setHeroName(String heroName) {
         this.heroName = heroName;
-    }
-
-    public String getHeroCity() {
-        return heroCity;
-    }
-
-    public void setHeroCity(String heroCity) {
-        this.heroCity = heroCity;
-    }
-
-    public String getUniverse() {
-        return universe;
-    }
-
-    public void setUniverse(String universe) {
-        this.universe = universe;
     }
 
     public double getHeroSalary() {

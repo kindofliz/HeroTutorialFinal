@@ -31,6 +31,7 @@ public class District {
     }
 
 
+
     // is a method where total heroes’ levels will be summarized and divided by the amount of the hero in this District.
     public float calculateAvgLevelInDistrict() {
 
@@ -49,9 +50,23 @@ public class District {
 
     }
 
+
+
+    //Method to print Hero names of all heroes in a district
+    public ArrayList<String> districtHeroList() {
+        ArrayList<String> allHeroesInDistrict = new ArrayList<>();
+        for (int i = 0; i < personInTheDistrict.size(); i++) {
+            Person eachPerson = getPersonInTheDistrict().get(i);
+            if (eachPerson instanceof Hero) {
+                String allNames = ((Hero) eachPerson).getHeroName();
+                allHeroesInDistrict.add(allNames);
+            }
+        }
+        return allHeroesInDistrict;
+    }
+
+
     //METHOD TO STRING
-
-
     @Override
     public String toString() {
         return "District{" +
@@ -94,5 +109,7 @@ public class District {
     public void setPersonInTheDistrict(ArrayList<Person> personInTheDistrict) {
         this.personInTheDistrict = personInTheDistrict;
     }
+
+
 }
 

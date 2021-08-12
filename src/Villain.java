@@ -1,12 +1,8 @@
-import java.util.ArrayList;
-
 public class Villain extends Person {
 
     //Attributes/Properties
     private int villainID;
     private String villainName;
-    private String villainCity;
-    private String universe;
     private double villainSalary;
     private int crimeTime;
 
@@ -17,13 +13,11 @@ public class Villain extends Person {
 
 
     //ARGUMENT CONSTRUCTOR
-    public Villain(String name, String surname, int villainID, String villainName, String villainCity, String universe, double villainSalary, int crimeTime) {
+    public Villain(String name, String surname, int villainID, String villainName, double villainSalary, int crimeTime) {
         this.name = name;
         this.surname = surname;
         this.villainID = villainID;
         this.villainName = villainName;
-        this.villainCity = villainCity;
-        this.universe = universe;
         this.villainSalary = villainSalary;
         this.crimeTime = crimeTime;
     }
@@ -44,8 +38,6 @@ public class Villain extends Person {
                 ", surname='" + surname + '\'' +
                 ", villainID=" + villainID +
                 ", villainName='" + villainName + '\'' +
-                ", villainCity='" + villainCity + '\'' +
-                ", universe='" + universe + '\'' +
                 ", villainSalary=" + villainSalary +
                 ", crimeTime=" + crimeTime +
                 '}';
@@ -66,22 +58,6 @@ public class Villain extends Person {
 
     public void setVillainName(String villainName) {
         this.villainName = villainName;
-    }
-
-    public String getVillainCity() {
-        return villainCity;
-    }
-
-    public void setVillainCity(String villainCity) {
-        this.villainCity = villainCity;
-    }
-
-    public String getUniverse() {
-        return universe;
-    }
-
-    public void setUniverse(String universe) {
-        this.universe = universe;
     }
 
     public double getVillainSalary() {
